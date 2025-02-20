@@ -425,7 +425,7 @@ public class BrowserUtils {
 
     /**
      * executes the given JavaScript command on given web element
-     *
+     * param(parameter) is a data type
      * @param element
      */
     public static void executeJScommand(WebElement element, String command) {
