@@ -24,8 +24,7 @@ public class Vehicles_StepDefinitions {
     @Then("user should see below options in the edit car info dropdown menu")
     public void user_should_see_below_options_in_the_edit_car_info_dropdown_menu(List<String> expectedDropdownItems) {
         BrowserUtils.sleep(2);
-        actions.moveToElement(vehiclesPage.editVehicleOptionsDropdown).perform();
-        BrowserUtils.sleep(2);
+        BrowserUtils.hover(vehiclesPage.editVehicleOptionsDropdown);
         for (String eachDropdownItem : expectedDropdownItems) {
                     vehiclesPage.dynamicDropdownFinder(eachDropdownItem).isDisplayed();
                 }
