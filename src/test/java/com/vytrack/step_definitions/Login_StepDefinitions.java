@@ -3,12 +3,12 @@ package com.vytrack.step_definitions;
 import com.vytrack.pages.LoginPage;
 import com.vytrack.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
-public class LoginStepDefs {
+public class Login_StepDefinitions {
 
 
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
-        System.out.println("Login to app in Before method");
+        //System.out.println("Login to app in Before method");
     }
 
     @Given("the user logged in as {string}")
