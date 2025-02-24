@@ -10,7 +10,7 @@ Feature: Users should be able to login
   Scenario: Verify login with different credentials
     Given the user logged in with username as "User1" and password as "UserUser123"
 
-  Scenario Outline: Each user should see edit car info icons on the Vehicles page
+  Scenario Outline: Each user logs in
     Given the user logged in with username as "<username>" and password as "<password>"
     Examples:
       | username        | password    |
