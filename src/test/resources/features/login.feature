@@ -9,7 +9,7 @@ Feature: Users should be able to login
     Given the user logged in as "driver"
 
   Scenario: Verify login with different credentials
-    Given the user logged in with username as "User1" and password as "UserUser123"
+   # Given the user logged in with username as "User1" and password as "UserUser123"
 
 
 

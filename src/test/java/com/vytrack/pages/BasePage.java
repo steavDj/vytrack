@@ -38,6 +38,12 @@ public class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
+
+    @FindBy(xpath ="//i[@class='fa-question-circle']" )
+    public WebElement questionMark;
+
+
+
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
