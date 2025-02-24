@@ -20,6 +20,7 @@ public class US08_CalendarStepDefinitions {
 
     @And("user click to the Calendar Events")
     public void userClickToTheCalendarEvents() {
+        BrowserUtils.sleep(2);
         basePage.navigateToModule("Activities", "Calendar Events");
     }
 
@@ -43,4 +44,16 @@ public class US08_CalendarStepDefinitions {
         Assert.assertEquals(expectedValue, actualValue);
     }
 
+
+    @And("user clear Repeat Every field")
+    public void userClearRepeatEveryField() {
+        createCalendarEventPage.repeatFrequencyField.clear();
+        BrowserUtils.sleep(3);
+    }
+
+    @Then("user see error message {string}")
+    public void userSeeErrorMessage(String expectedErrorMessage) {
+        String actualErrorMessage = createCalendarEventPage.repeatFrequencyFieldErrorMessage.getText();
+        Assert.assertEquals(expectedErrorMessage, actualErrorMessage);
+    }
 }

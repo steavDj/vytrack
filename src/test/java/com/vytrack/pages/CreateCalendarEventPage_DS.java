@@ -20,6 +20,8 @@ public class CreateCalendarEventPage_DS {
     @FindBy (xpath = "//span[.='day(s)']//preceding-sibling::input[1]")
     public WebElement repeatFrequencyField;
 
+    @FindBy (xpath = "//div[@data-name='recurrence-settings']//div[@data-name='recurrence-daily']//span[@class='validation-failed']")
+    public WebElement repeatFrequencyFieldErrorMessage;
 
 
 }
