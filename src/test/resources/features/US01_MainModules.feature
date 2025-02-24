@@ -1,7 +1,8 @@
 Feature: Display main modules select bar for logged-in users
 
+  @driverWipMansur
   Scenario: Driver sees the correct modules.
-    Given the user is logged in as "driver"
+    Given the user is logged in as driver
     Then user should see four modules in the select bar
 
   Scenario: Sales Manager sees the correct modules
