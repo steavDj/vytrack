@@ -9,10 +9,10 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
-import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
+
 
 public class US01_MainModules_StepDefs {
 
