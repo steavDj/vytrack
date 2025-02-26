@@ -7,9 +7,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class US03_Pinbar_StepDefinitions {
 
     BasePage basePage = new BasePage();
@@ -17,8 +14,8 @@ public class US03_Pinbar_StepDefinitions {
 
     @When("user click the Learn how to use this space link on the homepage")
     public void userClickTheLearnHowToUseThisSpaceLinkOnTheHomepage() throws InterruptedException {
-       BrowserUtils.waitForVisibility(basePage.learnPinbar, 3);
-        BrowserUtils.waitForClickablility(basePage.learnPinbar, 3);
+        BrowserUtils.waitForVisibility(basePage.learnPinbar, 10);
+        BrowserUtils.waitForClickablility(basePage.learnPinbar, 10);
         basePage.learnPinbar.click();
     }
 
@@ -39,7 +36,6 @@ public class US03_Pinbar_StepDefinitions {
         Assert.assertTrue(pinbarPage.pinbarImage.getAttribute("src").contains(expectedImageSource));
         Assert.assertTrue("Image is Not Visible", pinbarPage.pinbarImage.isDisplayed());
     }
-
 
 
 }
