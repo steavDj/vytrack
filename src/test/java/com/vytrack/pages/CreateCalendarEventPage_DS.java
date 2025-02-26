@@ -20,6 +20,13 @@ public class CreateCalendarEventPage_DS {
     @FindBy (xpath = "//span[.='day(s)']//preceding-sibling::input[1]")
     public WebElement repeatFrequencyField;
 
+    @FindBy(id = "tinymce")
+    public WebElement descriptionBox;
+
+    @FindBy(tagName = "iframe")
+    public WebElement iframe;
+
+
 
 
 }
