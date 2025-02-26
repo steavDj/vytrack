@@ -14,14 +14,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class US08_CalendarStepDefinitions {
 
-    BasePage basePage = new BasePage();
     CalendarEventsPage_DS calendarEventsPage = new CalendarEventsPage_DS();
     CreateCalendarEventPage_DS createCalendarEventPage = new CreateCalendarEventPage_DS();
 
     @And("user click to the Calendar Events")
     public void userClickToTheCalendarEvents() {
         BrowserUtils.sleep(2);
-        basePage.navigateToModule("Activities", "Calendar Events");
+        calendarEventsPage.navigateToModule("Activities", "Calendar Events");
     }
 
     @Then("user click to the Create Calendar Event")
