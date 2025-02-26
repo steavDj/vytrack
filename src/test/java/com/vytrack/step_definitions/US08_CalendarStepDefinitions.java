@@ -48,7 +48,7 @@ public class US08_CalendarStepDefinitions {
     @And("user clear Repeat Every field")
     public void userClearRepeatEveryField() {
         createCalendarEventPage.repeatFrequencyField.clear();
-        BrowserUtils.sleep(3);
+        BrowserUtils.sleep(1);
     }
 
     @Then("user see error message {string}")
