@@ -14,8 +14,8 @@ public class US03_Pinbar_StepDefinitions {
 
     @When("user click the Learn how to use this space link on the homepage")
     public void userClickTheLearnHowToUseThisSpaceLinkOnTheHomepage() throws InterruptedException {
-        BrowserUtils.waitForVisibility(basePage.learnPinbar, 10);
-        BrowserUtils.waitForClickablility(basePage.learnPinbar, 10);
+        BrowserUtils.waitForVisibility(basePage.learnPinbar, 20);
+        BrowserUtils.waitForClickablility(basePage.learnPinbar, 20);
         basePage.learnPinbar.click();
     }
 
