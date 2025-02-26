@@ -9,14 +9,15 @@ import org.junit.Assert;
 
 public class US03_Pinbar_StepDefinitions {
 
-    BasePage basePage = new BasePage();
     PinbarPage pinbarPage = new PinbarPage();
 
     @When("user click the Learn how to use this space link on the homepage")
     public void userClickTheLearnHowToUseThisSpaceLinkOnTheHomepage() throws InterruptedException {
-        BrowserUtils.waitForVisibility(basePage.learnPinbar, 20);
-        BrowserUtils.waitForClickablility(basePage.learnPinbar, 20);
-        basePage.learnPinbar.click();
+      //  BrowserUtils.waitForVisibility(basePage.learnPinbar, 20);
+      //  BrowserUtils.waitForClickablility(basePage.learnPinbar, 20);
+        pinbarPage.waitUntilLoaderScreenDisappear();
+        BrowserUtils.waitFor(2);
+        pinbarPage.learnPinbar.click();
     }
 
     @Then("user sees {string} as a main header")

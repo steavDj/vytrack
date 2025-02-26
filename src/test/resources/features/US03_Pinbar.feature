@@ -14,5 +14,5 @@ Feature: Users should be able to login
     Examples:
       | username        | password    |
       | user1           | UserUser123 |
-      | storemanager51  | UserUser123 |
+      | storemanager53  | UserUser123 |
       | salesmanager101 | UserUser123 |
