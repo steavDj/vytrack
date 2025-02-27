@@ -40,7 +40,6 @@ public abstract class BasePage {
 
 
 
-
     @FindBy(linkText = "Learn how to use this space")
     public WebElement learnPinbar;
 
