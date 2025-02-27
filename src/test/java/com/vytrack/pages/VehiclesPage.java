@@ -1,6 +1,7 @@
 package com.vytrack.pages;
 
 import com.vytrack.utilities.Driver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,9 +12,7 @@ public class VehiclesPage extends BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-//button to see view, edit, and delete car - US06-LS
-
-
+    // Button to see view, edit, and delete car - US06-LS
     @FindBy(xpath = "//table//tbody//tr[2]//td[last()]")
     public WebElement editVehicleOptionsDropdown;;
 
@@ -30,6 +29,5 @@ public class VehiclesPage extends BasePage {
         String xpath = "//a[@title='" + buttonName + "']";
         return Driver.getDriver().findElement(By.xpath(xpath));
     }
-
 
 }

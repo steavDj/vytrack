@@ -4,17 +4,18 @@ import com.vytrack.pages.LoginPage;
 import com.vytrack.pages.VehiclesPage;
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.Driver;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.interactions.Actions;
-import java.util.List;
 
+import org.openqa.selenium.interactions.Actions;
+
+import java.util.List;
 
 public class Vehicles_StepDefinitions {
     LoginPage loginPage = new LoginPage();
     VehiclesPage vehiclesPage = new VehiclesPage();
     Actions actions = new Actions(Driver.getDriver());
-
 
     @Given("user clicks to vehicles module")
     public void user_clicks_to_vehicles_module() {
@@ -29,8 +30,6 @@ public class Vehicles_StepDefinitions {
                     vehiclesPage.dynamicDropdownFinder(eachDropdownItem).isDisplayed();
                 }
 
-
     }
-
 
 }
