@@ -12,21 +12,19 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class EventDescriptionInput_StepDefs {
-    VehiclesPage vehiclesPage = new VehiclesPage();
     CreateCalendarEventPage_DS createCalendarEventPage = new CreateCalendarEventPage_DS();
-    CalendarEventsPage_DS calendarEventsPage = new CalendarEventsPage_DS();
+    //CalendarEventsPage_DS calendarEventsPage = new CalendarEventsPage_DS(); - check with Alvin
 
     @Given("the user navigates to {string} under {string}")
     public void the_user_navigates_to_under(String tab, String module) {
 
-        vehiclesPage.navigateToModule(tab, module);
+        createCalendarEventPage.navigateToModule(tab, module);
     }
 
     @Given("the user navigates to {string}")
     public void the_user_navigates_to(String button) {
-        //a[@title='Create Calendar event'] and clicks
-        BrowserUtils.waitForClickablility(calendarEventsPage.createCalendarEvent, 3);
-        calendarEventsPage.createCalendarEvent.click();
+        BrowserUtils.waitForClickablility(createCalendarEventPage.createCalendarEvent, 3);
+        createCalendarEventPage.createCalendarEvent.click();
     }
 
     @When("the user writes the {string} in {string}")
@@ -40,7 +38,5 @@ public class EventDescriptionInput_StepDefs {
     @Then("the user should see the {string}")
     public void the_user_should_see_the(String expectedMessage) {
         Assert.assertEquals(expectedMessage, createCalendarEventPage.descriptionBox.getText());
-        //  System.out.println("expectedMessage = " + expectedMessage);
-        //  System.out.println("createCalendarEventPage.descriptionBox.getText() = " + createCalendarEventPage.descriptionBox.getText());
     }
 }
