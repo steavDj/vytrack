@@ -7,6 +7,12 @@ Feature: Users should be able to login
   Scenario: Verify login with different user types
     Given the user logged in as "driver"
 
+  Scenario: Verify login with different user types
+    Given the user logged in as "sales manager"
+
+  Scenario: Verify login with different user types
+    Given the user logged in as "store manager"
+
   Scenario: Verify login with different credentials
    # Given the user logged in with username as "User1" and password as "UserUser123"
 
