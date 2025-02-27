@@ -14,13 +14,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class US08_CalendarStepDefinitions {
 
-    BasePage basePage = new BasePage();
     CalendarEventsPage_DS calendarEventsPage = new CalendarEventsPage_DS();
     CreateCalendarEventPage_DS createCalendarEventPage = new CreateCalendarEventPage_DS();
 
     @And("user click to the Calendar Events")
     public void userClickToTheCalendarEvents() {
-        basePage.navigateToModule("Activities", "Calendar Events");
+        BrowserUtils.sleep(2);
+        calendarEventsPage.navigateToModule("Activities", "Calendar Events");
     }
 
     @Then("user click to the Create Calendar Event")
@@ -43,4 +43,16 @@ public class US08_CalendarStepDefinitions {
         Assert.assertEquals(expectedValue, actualValue);
     }
 
+
+    @And("user clear Repeat Every field")
+    public void userClearRepeatEveryField() {
+        createCalendarEventPage.repeatFrequencyField.clear();
+        BrowserUtils.sleep(1);
+    }
+
+    @Then("user see error message {string}")
+    public void userSeeErrorMessage(String expectedErrorMessage) {
+        String actualErrorMessage = createCalendarEventPage.repeatFrequencyFieldErrorMessage.getText();
+        Assert.assertEquals(expectedErrorMessage, actualErrorMessage);
+    }
 }
