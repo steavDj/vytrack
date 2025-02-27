@@ -39,8 +39,7 @@ public abstract class BasePage {
     public WebElement myUser;
 
 
-    @FindBy(xpath ="//i[@class='fa-question-circle']" )
-    public WebElement questionMark;
+
 
     @FindBy(linkText = "Learn how to use this space")
     public WebElement learnPinbar;
