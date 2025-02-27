@@ -2,7 +2,9 @@ package com.vytrack.step_definitions;
 
 import com.vytrack.pages.BasePage;
 import com.vytrack.pages.VehiclesModelPage_XS;
+
 import io.cucumber.java.en.Then;
+
 import org.junit.Assert;
 
 import java.util.ArrayList;
@@ -26,8 +28,8 @@ public class US05_VehiclesModelSteps extends BasePage {
 
         List<String> actualColumns = new ArrayList<>();
 
-        for (int i = 1; i < vehiclesModelPage.tablesRows.size() - 1; i++) {
-            actualColumns.add(vehiclesModelPage.tablesRows.get(i).getText());
+        for (int i = 1; i < vehiclesModelPage.webTableColumns.size() - 1; i++) {
+            actualColumns.add(vehiclesModelPage.webTableColumns.get(i).getText());
         }
 
         Assert.assertEquals("Vehicles Model Column Verification FAILED", actualColumns, expectedColumns);

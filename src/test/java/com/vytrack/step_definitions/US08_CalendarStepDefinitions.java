@@ -1,16 +1,14 @@
 package com.vytrack.step_definitions;
 
-import com.vytrack.pages.BasePage;
 import com.vytrack.pages.CalendarEventsPage_DS;
 import com.vytrack.pages.CreateCalendarEventPage_DS;
 import com.vytrack.utilities.BrowserUtils;
-import com.vytrack.utilities.Driver;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
+import org.junit.Assert;
 
 public class US08_CalendarStepDefinitions {
 
@@ -42,7 +40,6 @@ public class US08_CalendarStepDefinitions {
 
         Assert.assertEquals(expectedValue, actualValue);
     }
-
 
     @And("user clear Repeat Every field")
     public void userClearRepeatEveryField() {
