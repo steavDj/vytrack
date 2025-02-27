@@ -13,6 +13,6 @@ Feature: Users should be able to login
 
     Examples:
       | username        | password    |
-      | user1           | UserUser123 |
+      | user3           | UserUser123 |
       | storemanager53  | UserUser123 |
-      | salesmanager101 | UserUser123 |
+      | salesmanager103 | UserUser123 |

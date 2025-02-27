@@ -1,6 +1,7 @@
 package com.vytrack.step_definitions;
 
 import com.vytrack.pages.LoginPage;
+import com.vytrack.pages.QuestionMarkPage;
 import com.vytrack.utilities.BrowserUtils;
 
 import io.cucumber.java.en.Then;
@@ -10,10 +11,11 @@ public class US02_QuestionMark_StepDefs {
 
   LoginPage loginPage=new LoginPage();
 
+
     @When("User click the question mark icon")
     public void user_click_the_question_mark_icon() {
 
-        loginPage.questionMark.click();
+
         BrowserUtils.switchToWindow("Welcome to Oro Documentation");
 
     }
