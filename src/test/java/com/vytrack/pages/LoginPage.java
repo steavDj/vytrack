@@ -1,6 +1,5 @@
 package com.vytrack.pages;
 
-
 import com.vytrack.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,7 +19,6 @@ public class LoginPage extends BasePage {
 
     @FindBy(name = "_submit")
     public WebElement submit;
-
 
     public void login(String username, String password) {
         userName.sendKeys(username);

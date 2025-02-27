@@ -5,13 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CalendarEventsPage_DS extends BasePage{
+public class QuestionMarkPage extends BasePage {
 
-    public CalendarEventsPage_DS() {
+    public QuestionMarkPage(){
         PageFactory.initElements(Driver.getDriver(), this);
+
     }
 
-    @FindBy (xpath = "//a[@title='Create Calendar event']")
-    public WebElement createCalendarEvent;
+    @FindBy(xpath ="//i[@class='fa-question-circle']" )
+    public WebElement questionMark;
+
+
+
 
 }
