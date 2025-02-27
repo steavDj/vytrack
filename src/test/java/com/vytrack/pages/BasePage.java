@@ -1,5 +1,8 @@
 package com.vytrack.pages;
 
+
+
+
 import com.vytrack.utilities.BrowserUtils;
 import com.vytrack.utilities.Driver;
 import org.openqa.selenium.By;
@@ -40,9 +43,13 @@ public abstract class BasePage {
     @FindBy(linkText = "Learn how to use this space")
     public WebElement learnPinbar;
 
+
+
+
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
+
 
     /**
      * @return page name, for example: Dashboard
@@ -54,9 +61,10 @@ public abstract class BasePage {
         return pageSubTitle.getText();
     }
 
+
     /**
      * Waits until loader screen present. If loader screen will not pop up at all,
-     * NoSuchElementException will be handled by try/catch block
+     * NoSuchElementException will be handled  bu try/catch block
      * Thus, we can continue in any case.
      */
     public void waitUntilLoaderScreenDisappear() {
@@ -68,6 +76,8 @@ public abstract class BasePage {
         }
 
     }
+
+
 
     /**
      * This method will navigate user to the specific module in vytrack application.
