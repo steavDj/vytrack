@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class BasePage {
+public abstract class BasePage {
 
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
@@ -37,6 +37,14 @@ public class BasePage {
 
     @FindBy(linkText = "My User")
     public WebElement myUser;
+
+
+
+    @FindBy(linkText = "Learn how to use this space")
+    public WebElement learnPinbar;
+
+
+
 
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);

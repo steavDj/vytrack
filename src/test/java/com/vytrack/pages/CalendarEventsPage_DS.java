@@ -5,15 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
+public class CalendarEventsPage_DS extends BasePage{
 
-public class MainModulesPage {
-
-    public MainModulesPage() {
+    public CalendarEventsPage_DS() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li/a")
-    public List<WebElement>  mainModules;
+    @FindBy (xpath = "//a[@title='Create Calendar event']")
+    public WebElement createCalendarEvent;
 
 }

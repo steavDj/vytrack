@@ -1,5 +1,6 @@
 package com.vytrack.utilities;
 
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -41,6 +42,11 @@ public class Driver {
                 case "chrome":
                     //WebDriverManager.chromedriver().setup();
                     driverPool.set(new ChromeDriver());
+
+                    // Chrome Driver configuration to move browser window to the left monitor
+                    // Comment/Uncomment below line for usage -> Optional (Xander)
+//                    driverPool.get().manage().window().setPosition(new Point(-1000, 0));
+
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
