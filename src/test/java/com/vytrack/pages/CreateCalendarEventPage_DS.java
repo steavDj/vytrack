@@ -23,5 +23,4 @@ public class CreateCalendarEventPage_DS extends BasePage {
     @FindBy (xpath = "//div[@data-name='recurrence-settings']//div[@data-name='recurrence-daily']//span[@class='validation-failed']")
     public WebElement repeatFrequencyFieldErrorMessage;
 
-
 }
