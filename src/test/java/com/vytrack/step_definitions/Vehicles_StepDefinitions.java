@@ -8,8 +8,11 @@ import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Vehicles_StepDefinitions {
@@ -26,10 +29,12 @@ public class Vehicles_StepDefinitions {
     public void user_should_see_below_options_in_the_edit_car_info_dropdown_menu(List<String> expectedDropdownItems) {
         BrowserUtils.sleep(2);
         BrowserUtils.hover(vehiclesPage.editVehicleOptionsDropdown);
-        for (String eachDropdownItem : expectedDropdownItems) {
-                    vehiclesPage.dynamicDropdownFinder(eachDropdownItem).isDisplayed();
-                }
-
+        //BrowserUtils.sleep(2);
+        List<String> actualEditOptions = new ArrayList<>();
+        for (WebElement eachOption : vehiclesPage.editOptions) {
+            actualEditOptions.add(eachOption.getDomAttribute("title"));
+        }
+        Assert.assertEquals(expectedDropdownItems, actualEditOptions);
     }
 
 }
