@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.List;
 
-public class BasePage {
+abstract class BasePage {
 
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
@@ -37,6 +37,11 @@ public class BasePage {
 
     @FindBy(linkText = "My User")
     public WebElement myUser;
+
+    // *
+    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li[2]")
+    public WebElement fleetIcon;
+
 
     public BasePage() {
         PageFactory.initElements(Driver.getDriver(), this);
