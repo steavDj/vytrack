@@ -18,8 +18,10 @@ public class AccountPage_IT extends BasePage {
     @FindBy(xpath = "//span[@class='title title-level-2'][normalize-space()='Accounts']")
     public WebElement account;
 
-    @FindBy(xpath = "//select[@data-action='add-filter-select']/option")
-    public List<WebElement> filterOptions;
+    @FindBy(xpath = "//*[contains(@class, 'action') and contains(@class, 'btn') and contains(@class, 'mode-icon-only')]")
+    public WebElement filterButton;
 
+    @FindBy(xpath = "//*[@class='filter-container']/span/div")
+    public List<WebElement> filterOptions;
 
 }
