@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class MainModulesPage {
+public class MainModulesPage extends BasePage {
 
     public MainModulesPage() {
         PageFactory.initElements(Driver.getDriver(), this);

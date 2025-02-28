@@ -1,6 +1,5 @@
 package com.vytrack.step_definitions;
 
-import com.vytrack.pages.BasePage;
 import com.vytrack.pages.VehiclesModelPage_XS;
 
 import io.cucumber.java.en.Then;
@@ -10,7 +9,7 @@ import org.junit.Assert;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US05_VehiclesModelSteps extends BasePage {
+public class US05_VehiclesModelSteps {
 
     VehiclesModelPage_XS vehiclesModelPage = new VehiclesModelPage_XS();
 
