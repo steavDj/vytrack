@@ -16,9 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Vehicles_StepDefinitions {
-    LoginPage loginPage = new LoginPage();
     VehiclesPage vehiclesPage = new VehiclesPage();
-    Actions actions = new Actions(Driver.getDriver());
 
     @Given("user clicks to vehicles module")
     public void user_clicks_to_vehicles_module() {
