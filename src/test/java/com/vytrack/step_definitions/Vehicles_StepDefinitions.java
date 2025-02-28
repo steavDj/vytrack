@@ -1,16 +1,13 @@
 package com.vytrack.step_definitions;
 
-import com.vytrack.pages.LoginPage;
 import com.vytrack.pages.VehiclesPage;
 import com.vytrack.utilities.BrowserUtils;
-import com.vytrack.utilities.Driver;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 import java.util.ArrayList;
 import java.util.List;
