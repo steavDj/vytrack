@@ -13,8 +13,6 @@ Feature: Vytrack vehicles page functionality
     |View|
     |Edit|
     |Delete|
-#    Then user should see edit icon
-#    Then user should see delete icon
     Examples:
       | username        | password    |
       | user1           | UserUser123 |
