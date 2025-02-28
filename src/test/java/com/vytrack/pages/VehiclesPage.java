@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class VehiclesPage extends BasePage {
     public VehiclesPage(){
         PageFactory.initElements(Driver.getDriver(), this);
@@ -24,6 +26,15 @@ public class VehiclesPage extends BasePage {
 
     @FindBy(xpath = "//a[@title=\"View\"]")
     public WebElement viewVehicleButton;
+
+    @FindBy(xpath = "//input[@tabindex='-1']")
+
+    public List<WebElement> allCheckBoxesInBody;
+
+
+    @FindBy(xpath = "//thead//button/input[@type='checkbox']")
+    public WebElement firstCheckBoxInThead;
+
 
     public WebElement dynamicDropdownFinder(String buttonName){
         String xpath = "//a[@title='" + buttonName + "']";

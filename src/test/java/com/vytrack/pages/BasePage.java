@@ -38,7 +38,9 @@ public abstract class BasePage {
     @FindBy(linkText = "My User")
     public WebElement myUser;
 
-
+    // *
+    @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li[2]")
+    public WebElement fleetIcon;
 
     @FindBy(linkText = "Learn how to use this space")
     public WebElement learnPinbar;
