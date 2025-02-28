@@ -12,19 +12,18 @@ import org.junit.Assert;
 
 public class US08_CalendarStepDefinitions {
 
-    CalendarEventsPage_DS calendarEventsPage = new CalendarEventsPage_DS();
     CreateCalendarEventPage_DS createCalendarEventPage = new CreateCalendarEventPage_DS();
 
     @And("user click to the Calendar Events")
     public void userClickToTheCalendarEvents() {
         BrowserUtils.sleep(2);
-        calendarEventsPage.navigateToModule("Activities", "Calendar Events");
+        createCalendarEventPage.navigateToModule("Activities", "Calendar Events");
     }
 
     @Then("user click to the Create Calendar Event")
     public void userClickToTheCreateCalendarEvent() {
         BrowserUtils.sleep(3);
-        calendarEventsPage.createCalendarEvent.click();
+        createCalendarEventPage.createCalendarEvent.click();
     }
 
     @When("user click on the Repeat checkbox")
